@@ -1,0 +1,735 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: logo;
+  src: url("./font/Wilson_wells.ttf");
+}
+@font-face {
+  font-family: Unique;
+  src: url("./font//Unique.ttf");
+}
+@font-face {
+  font-family: Italiana;
+  src: url("./font/Italiana-Regular.ttf");
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 0 3%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  /* border-bottom: 1px solid red; */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+  font-size: 5rem;
+  font-family: logo;
+  cursor: pointer;
+}
+
+.links,
+.loginSignup {
+  font-size: 2.5rem;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.links span,
+.loginSignup span {
+  cursor: pointer;
+  border-bottom: 1.5px solid transparent;
+  padding: 1rem 0.5rem;
+}
+
+.links span:hover,
+.loginSignup span:hover {
+  border-bottom: 1.5px solid black;
+  transition: all 1s;
+}
+
+.loginSignup {
+  height: max-content;
+  width: max-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.welcome {
+  width: max-content;
+  font-weight: 700;
+  /* background-color: red; */
+}
+
+.navBarBottomLine {
+  width: 100%;
+}
+
+hr {
+  width: 98%;
+  border: 0.12rem solid black;
+  margin-bottom: 2rem;
+}
+
+.part1 {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  padding-bottom: 10%;
+}
+
+.left {
+  width: 60%;
+  border-right: 0.2rem solid rgb(104, 104, 104);
+  align-items: start !important;
+}
+img {
+  background-size: cover;
+}
+
+.post1 {
+  height: max-content;
+  width: 90%;
+  flex-direction: column;
+}
+
+.imageWithBottom {
+  flex-direction: column;
+}
+
+.Post1ImageBottom {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.Post1ImageBottom span:nth-child(1) span {
+  margin-right: 1.5rem;
+}
+
+.Post1Bottom {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.Post1Title {
+  padding: 2.5rem 0;
+}
+
+.Post1Title span {
+  font-size: 3rem;
+  color: black;
+  font-weight: bold;
+}
+
+.Post1Desc {
+  color: black;
+  font-weight: normal;
+}
+
+.right {
+  height: 100%;
+  width: 40%;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+.post2,
+.post3 {
+  height: max-content;
+  width: 100%;
+}
+
+.post2 .post2Image,
+.post3 .post3Image {
+  height: 18rem;
+  /* background-position: center;
+  background-size: cover; */
+  transition: 1s;
+  background-size: cover !important;
+  cursor: pointer;
+}
+
+.post1Image {
+  height: 40rem !important;
+  width: 100%;
+  background-image: url("https://newsfeast.in/wp-content/uploads/2023/04/Tiger-3.png") !important;
+  transition: 1s;
+  background-size: cover !important;
+  cursor: pointer;
+}
+
+.post1Image:hover,
+.post2Image:hover,
+.post3Image:hover {
+  background-position: center !important;
+  background-size: cover !important;
+}
+.post2 .post2Image {
+  background-image: url("https://randompicturegenerator.com/img/people-generator/g7e601fc028f2baf27b26aa65d75e26d74d7efe971c62e75b054072da44803395061aa0305e1edf1c208fbfccf1c6a039_640.jpg") !important;
+}
+
+.post3 .post3Image {
+  background-image: url("https://randompicturegenerator.com/img/people-generator/g84bc5d5bb81936123afb8583c78fcad70425edd5623128d56cf22a3fd5378eb61063af6a3324b2d4a811ebacc8a72cf8_640.jpg") !important;
+}
+
+.Post2Bottom,
+.Post3Bottom {
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: rgb(52, 52, 52);
+  padding: 1rem 0;
+}
+
+.Post2Bottom span:nth-child(1) span,
+.Post3Bottom span:nth-child(1) span {
+  margin-right: 1.5rem;
+}
+
+.Post2Title,
+.Post3Title {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.Post2Title:hover,
+.Post3Title:hover {
+  opacity: 0.6;
+}
+
+.Post2Desc,
+.Post3Desc {
+  font-size: 1.7rem;
+}
+
+.part2,
+.part3,
+.part4,
+.part5 {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem;
+}
+
+.TrendingPart,
+.LatestPart {
+  padding: 0rem 0;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 3rem;
+  font-family: Italiana;
+  font-weight: 600;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+#viewTrending,
+#viewArticles,
+#viewBooks,
+#viewPodcasts {
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 2rem;
+  text-transform: capitalize;
+  border-bottom: 0.21rem solid black;
+}
+
+#viewTrending:hover,
+#viewArticles:hover,
+#viewBooks:hover,
+#viewPodcasts:hover {
+  opacity: 0.5;
+}
+
+.carousel,
+.booksCarousel {
+  height: 50rem;
+  margin: 5rem 0;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  column-gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.carouselPost,
+.book {
+  min-width: 45%;
+  /* scroll-snap-align: start; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 0 2rem;
+  /* border-right: 1px solid rgb(0, 0, 0); */
+}
+
+.carouselPost:nth-child(1) .carouselImage {
+  background-image: url("https://thenational-the-national-prod.cdn.arcpublishing.com/resizer/-3J4LhKOJFxWaCGFAoeZ7dZEfdM=/800x0/filters:format(jpg):quality(70):focal(521x382:531x392)/cloudfront-eu-central-1.images.arcpublishing.com/thenational/W6KXQDXSK5DI7CGCR36UGEXLEM");
+}
+.carouselPost:nth-child(2) .carouselImage {
+  background-image: url("https://images.unsplash.com/photo-1563203369-26f2e4a5ccf7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+}
+.carouselPost:nth-child(3) .carouselImage {
+  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/1570D/production/_130312878_66128822.jpg.webp");
+}
+.carouselPost:nth-child(4) .carouselImage {
+  background-image: url("https://media.npr.org/assets/img/2023/06/25/ap23175141856569_wide-e1a122910ec5c07ade66c7474a8dad8dee03cd38.jpg?s=700&c=85&f=webp");
+}
+.carouselPost:nth-child(5) .carouselImage {
+  background-image: url("https://hips.hearstapps.com/hmg-prod/images/cruise1-64a6d2ebd6d34.png?crop=1xw:0.6628787878787878xh;center,top&resize=1200:*");
+}
+.carouselPost:nth-child(6) .carouselImage {
+  background-image: url("https://images.hellomagazine.com/horizon/landscape/74744934616a-stranger-things-main-d.jpg?tx=c_fill,w_1280");
+}
+
+.carouselImage {
+  height: 65%;
+  width: 100%;
+  /* background-image: url("https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+  */
+  background-size: cover;
+  cursor: pointer;
+  transition: all ease 1s !important;
+}
+
+.carouselImage:hover {
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.carouselAbout {
+  height: max-content;
+  font-size: 2rem;
+  font-weight: 600;
+  color: grey;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carouselAbout p:nth-child(1) span {
+  margin-right: 3rem;
+}
+
+.carouselTitle {
+  padding: 1rem 0;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.carouselTitle:hover {
+  opacity: 0.6;
+}
+
+.part3 {
+  flex-direction: column;
+  height: max-content;
+  margin-top: 10rem;
+  row-gap: 0;
+}
+
+.Articles,
+.Podcasts {
+  margin-top: 7rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.Article,
+.Podcast {
+  height: max-content;
+  width: 100%;
+  display: flex;
+  column-gap: 5rem;
+}
+
+.Article_Image,
+.Podcast_Image {
+  height: 30rem;
+  width: 25%;
+  background-position: right;
+  background-size: cover;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.Article_Image:hover,
+.Podcast_Image:hover {
+  background-size: cover;
+  background-position: center;
+}
+
+.Article:nth-child(1) .Article_Image {
+  background-image: url("https://images.unsplash.com/photo-1659880208343-04018e0c2ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80");
+}
+.Article:nth-child(2) .Article_Image {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/S/pv-target-images/4a35c033f66805ba67d017dbd3ce2ab01a12b1801ffa6197ceb72420d6ea087d._RI_.jpg");
+}
+.Article:nth-child(3) .Article_Image {
+  background-image: url("https://balance.media/wp-content/uploads/2019/08/Cover-later.jpg");
+}
+
+.Article_Details,
+.Podcast_Details {
+  height: inherit;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.article_Author,
+.article_Title,
+.article_Desc,
+.podcast_Speaker,
+.podcast_Title,
+.podcast_Desc {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+.article_Title,
+.podcast_Title {
+  font-size: 3.5rem;
+}
+.article_Desc,
+.podcast_Desc {
+  font-size: 2rem;
+  word-spacing: 0.5rem;
+  line-height: 2.8rem;
+  color: rgb(87, 87, 87);
+}
+
+.part4 {
+  margin-top: 10rem;
+}
+
+.booksCarousel {
+  height: 40rem;
+}
+
+.book {
+  min-width: max-content;
+}
+
+.bookImage {
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.book:nth-child(1) .bookImage {
+  background-image: url("https://cdn.kobo.com/book-images/e3b6cfa6-190a-4ddf-aeb4-2d8bce850544/1200/1200/False/in-search-of-lost-time-21.jpg") !important;
+}
+
+.book:nth-child(2) .bookImage {
+  background-image: url("https://cdn.penguin.co.uk/dam-assets/books/9781448142675/9781448142675-jacket-large.jpg") !important;
+}
+.book:nth-child(3) .bookImage {
+  background-image: url("https://cdn.kobo.com/book-images/115a10ff-0818-4b66-bdea-98128d1bd658/1200/1200/False/crime-and-punishment-321.jpg") !important;
+}
+.book:nth-child(4) .bookImage {
+  background-image: url("https://cdn.kobo.com/book-images/1a735d96-6075-4bca-87b7-15fb97ee50c7/1200/1200/False/pride-and-prejudice-216.jpg") !important;
+}
+.book:nth-child(5) .bookImage {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1666994927i/61431922.jpg") !important;
+}
+
+.book:nth-child(6) .bookImage {
+  background-image: url("https://anahuang.com/wp-content/uploads/2023/01/King-of-Greed-ebook-scaled.jpg") !important;
+}
+.book:nth-child(7) .bookImage {
+  background-image: url("https://prodimage.images-bn.com/pimages/9780063282957_p0_v3_s1200x630.jpg") !important;
+}
+.book:nth-child(8) .bookImage {
+  background-image: url("https://m.media-amazon.com/images/I/81dkqO5LAQL._AC_UF1000,1000_QL80_.jpg") !important;
+}
+.book:nth-child(9) .bookImage {
+  background-image: url("https://m.media-amazon.com/images/I/712GlpGC-qL._AC_UF1000,1000_QL80_.jpg") !important;
+}
+
+.book:nth-child(10) .bookImage {
+  background-image: url("https://m.media-amazon.com/images/I/710+HcoP38L._AC_UF1000,1000_QL80_.jpg") !important;
+}
+
+.bookTitle,
+.bookBy {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.bookBy {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.buyButton {
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  text-align: center;
+  border: 0.1rem solid rgb(49, 49, 49);
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.buyButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.bolder {
+  font-weight: 800;
+}
+
+.part5 {
+  margin-top: 5rem;
+}
+
+.Podcast:nth-child(1) .Podcast_Image {
+  background-image: url("https://i.ytimg.com/vi/CSNve1zdxwo/maxresdefault.jpg");
+}
+.Podcast:nth-child(2) .Podcast_Image {
+  background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/67/b3/2e/67b32e2a-2c76-062e-a137-b544eea13cf3/mza_11647040000107936939.jpg/536x0w.webp");
+}
+.Podcast:nth-child(3) .Podcast_Image {
+  background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/e4/e4/2a/e4e42aec-de29-166a-be06-41fcf79466a4/mza_6413856055961475833.jpeg/536x0w.webp");
+}
+.Podcast:nth-child(4) .Podcast_Image {
+  background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Podcasts116/v4/c6/3a/c7/c63ac732-2822-2eaf-98fc-253512315f9e/mza_1772478346079908560.jpg/536x0w.webp");
+}
+.Podcast:nth-child(5) .Podcast_Image {
+  background-image: url("");
+}
+.Podcast:nth-child(6) .Podcast_Image {
+  background-image: url("");
+}
+
+.part6 {
+  margin-top: 15rem;
+  height: 50rem;
+  /* outline: 1px solid red; */
+  margin-bottom: 10rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.subscribeTitle {
+  height: 20%;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 4rem;
+  /* font-family: Italiana; */
+  text-transform: uppercase;
+  font-weight: bolder !important;
+}
+.subscribeTitle h1 {
+  padding: 0 2rem;
+}
+.subscribeDesc {
+  height: 35%;
+}
+
+.subscribeDesc span {
+  font-size: 2.7rem;
+  width: 70%;
+  font-weight: bolder;
+  padding: 2rem;
+  text-align: center;
+}
+
+#email::placeholder {
+  color: rgb(43, 43, 43);
+  font-weight: 900;
+}
+#email {
+  border-bottom: 1px solid black !important;
+}
+
+#email:focus,
+#email:active {
+  border: none !important;
+  outline: none;
+  border-bottom: 1px solid black !important;
+}
+
+#email,
+.Subscribe {
+  padding: 1rem;
+  font-size: 2.7rem;
+  font-weight: 900;
+  /* outline: none; */
+  border: none;
+}
+
+.Subscribe {
+  background-color: black;
+  color: aliceblue;
+  /* transition: all 1s; */
+  cursor: pointer;
+}
+
+.Subscribe:hover {
+  opacity: 0.7;
+  color: rgb(191, 193, 194);
+}
+
+footer {
+  height: 50rem;
+  padding: 5rem 6rem;
+  display: flex;
+  column-gap: 4rem;
+  background-color: rgb(32, 30, 30);
+}
+
+footer div {
+  color: white;
+  width: 20%;
+}
+
+.leftSide {
+  /* background-color: green; */
+}
+
+.leftSide,
+.MiddleSide {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 4.5rem;
+  /* font-weight: 700; */
+  font-size: 2.3rem;
+  word-spacing: 0.1rem;
+  font-family: sans-serif;
+  line-height: 3.9rem;
+}
+.leftSideDesc {
+  margin-bottom: 6rem;
+}
+
+.creator {
+  font-size: 2.3rem;
+}
+
+.me {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  font-weight: 700;
+}
+
+.me:hover {
+  opacity: 0.7;
+}
+
+.MiddleSide {
+  margin-left: 4rem;
+}
+.MiddleSide h1 {
+  font-size: 3rem;
+}
+
+.MiddleSide span {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.quicklinks span {
+  width: max-content;
+  cursor: pointer;
+}
+.quicklinks span:hover {
+  opacity: 0.7;
+}
+
+.rightSide {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rightSide span {
+  background-color: white;
+  height: 10rem;
+  width: 30rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.rightSide span:nth-child(2) {
+  background-image: url("https://india.mom-gmr.org/uploads/tx_lfrogmom/media/16506-1592_import.png");
+}
+.rightSide span:nth-child(1) {
+  background-image: url("https://image4.owler.com/logo/forbesindia_owler_20190614_061545_original.png");
+}
+.rightSide span:nth-child(3) {
+  background-image: url("https://logodix.com/logo/1657924.jpg");
+}
+.rightSide span:nth-child(4) {
+  background-image: url("https://apiexcellent.com/images/landingpage/hindustan-times-logo-20220307192322.jpg");
+}

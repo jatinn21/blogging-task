@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: logo;
+  src: url("./font/Wilson_wells.ttf");
+}
+
+@font-face {
+  font-family: Unique;
+  src: url("./font//Unique.ttf");
+}
+
+@font-face {
+  font-family: Italiana;
+  src: url("./font/Italiana-Regular.ttf");
+}
+
+body {
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginPage__Container {
+  height: 60rem;
+  width: 85%;
+  background-color: green;
+  display: flex;
+  outline: 1px solid black;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.login_part1 {
+  width: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.Login_logo {
+  height: 10%;
+  padding: 2rem 3rem;
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-family: logo;
+}
+
+.Login_middle {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.Login_middle h1 {
+  font-size: 3rem;
+  font-family: Unique;
+
+  font-weight: 800;
+  text-align: center;
+}
+
+.Login_middle p {
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-family: Italiana;
+  font-weight: 900;
+  color: grey;
+}
+
+.Dont_have_account {
+  width: 100%;
+  height: 10%;
+  font-size: 2rem;
+  color: grey;
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+}
+
+.Dont_have_account .accountfooter {
+  min-width: 100%;
+}
+
+.footerP1,
+.footerP2 {
+  width: 50%;
+  display: none;
+}
+
+.footerP1 {
+  display: flex;
+}
+
+.signupbutton {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loginSubmitBtn,
+.signupSubmitBtn {
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.loginSubmitBtn:hover,
+.signupSubmitBtn:hover {
+  opacity: 0.8;
+}
+
+.login_part2 {
+  width: 50%;
+  background-color: grey;
+  background-image: url("https://images.unsplash.com/photo-1546074177-ffdda98d214f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDN8fGJsb2dzfGVufDB8fHx8MTY0NTAwNzk1OQ&ixlib=rb-1.2.1&q=80&w=1200");
+  background-position: center;
+  background-size: cover;
+}
+
+.main {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.content {
+  transition: all 0.5s;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginInput,
+.loginSubmitBtn,
+.signupInput,
+.signupSubmitBtn {
+  padding: 1rem;
+  width: 70%;
+  font-size: 2rem;
+  font-family: Italiana;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.loginInput:active,
+.loginSubmitBtn:active,
+.signupInput:active,
+.signupSubmitBtn:active,
+.loginInput:focus,
+.loginSubmitBtn:focus,
+.signupInput:focus,
+.signupSubmitBtn:focus {
+  outline: none;
+}
+
+form {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: inherit;
+}
