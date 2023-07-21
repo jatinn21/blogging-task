@@ -3,21 +3,21 @@ import React, { Component } from "react";
 class part3 extends Component {
   render() {
     return (
-      <section class="part3" id="articles">
-        <div class="LatestPart">
+      <section className="part3" id="articles">
+        <div className="LatestPart">
           <span>The Latest Articles</span>
           <span id="viewArticles">View all</span>
         </div>
-        <section class="Articles">
-          <div class="Article">
-            <span class="Article_Image"></span>
-            <span class="Article_Details">
-              <p class="article_Author">- By Ross Geller</p>
-              <p class="article_Title">
+        <section className="Articles">
+          <div className="Article">
+            <span className="Article_Image"></span>
+            <span className="Article_Details">
+              <p className="article_Author">- By Ross Geller</p>
+              <p className="article_Title">
                 Scientists Shocked to Discover that Earth's Pigeons are Actually
                 Undercover Spie
               </p>
-              <p class="article_Desc">
+              <p className="article_Desc">
                 Prepare for a feathered surprise as scientists uncover the truth
                 about city pigeons. These innocent-looking birds are actually
                 undercover spies equipped with hidden gadgets. They silently
@@ -26,14 +26,14 @@ class part3 extends Component {
               </p>
             </span>
           </div>
-          <div class="Article">
-            <span class="Article_Image"></span>
-            <span class="Article_Details">
-              <p class="article_Author">- By Nickelodeon</p>
-              <p class="article_Title">
+          <div className="Article">
+            <span className="Article_Image"></span>
+            <span className="Article_Details">
+              <p className="article_Author">- By Nickelodeon</p>
+              <p className="article_Title">
                 Dora the Explorer: Lost in a Shopping Mall
               </p>
-              <p class="article_Desc">
+              <p className="article_Desc">
                 Dora, the adventurous young explorer, finds herself in a pickle
                 when she gets separated from Boots at a gigantic shopping mall.
                 Armed with her trusty map and backpack, she embarks on a mission
@@ -44,12 +44,14 @@ class part3 extends Component {
               </p>
             </span>
           </div>
-          <div class="Article">
-            <span class="Article_Image"></span>
-            <span class="Article_Details">
-              <p class="article_Author">- By Ranveer Allahbadia</p>
-              <p class="article_Title">A Guide to Procrastinating Like a Pro</p>
-              <p class="article_Desc">
+          <div className="Article">
+            <span className="Article_Image"></span>
+            <span className="Article_Details">
+              <p className="article_Author">- By Ranveer Allahbadia</p>
+              <p className="article_Title">
+                A Guide to Procrastinating Like a Pro
+              </p>
+              <p className="article_Desc">
                 Adulting can be tough, and sometimes the best solution is to
                 procrastinate with style. In this hilarious guide, we'll teach
                 you the art of putting off responsibilities like a true master.

@@ -59,7 +59,8 @@ const Loginpage = () => {
       // searching for mail && if found store the details in mailFound
       const mailFound = mailPresented.filter((acc) => {
         return (
-          loginInputs.loginEmail === acc.signupEmail &&
+          loginInputs.loginEmail.toLowerCase() ==
+            acc.signupEmail.toLowerCase() &&
           loginInputs.loginPassword === acc.signupPassword
         );
       });

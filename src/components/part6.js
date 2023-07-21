@@ -3,17 +3,17 @@ import React, { Component } from "react";
 class part6 extends Component {
   render() {
     return (
-      <section class="part6">
-        <div class="subscribeTitle center">
+      <section className="part6">
+        <div className="subscribeTitle center">
           <h1>Subscribe to Get More</h1>
         </div>
-        <div class="subscribeDesc center">
+        <div className="subscribeDesc center">
           <span>
             Sign up here to get the latest news, updates and special offers
             delivered directly to your inbox.
           </span>
         </div>
-        <div class="center" id="subscribeMail">
+        <div className="center" id="subscribeMail">
           <input
             type="email"
             name="email"
@@ -21,7 +21,7 @@ class part6 extends Component {
             placeholder="Enter Email"
           />
 
-          <input class="Subscribe" type="button" value="Subscribe" />
+          <input className="Subscribe" type="button" value="Subscribe" />
         </div>
       </section>
     );

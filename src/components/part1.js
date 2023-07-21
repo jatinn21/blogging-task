@@ -5,16 +5,16 @@ class Part1 extends Component {
   render() {
     return (
       <>
-        <span class="navBarBottomLine center">
+        <span className="navBarBottomLine center">
           <hr />
         </span>
-        <section class="part1">
-          <div class="left center">
-            <section class="post1 center">
-              <div class="imageWithBottom center">
-                <span class="post1Image"></span>
-                <section class="Post1ImageBottom">
-                  <div class="Post1Bottom">
+        <section className="part1">
+          <div className="left center">
+            <section className="post1 center">
+              <div className="imageWithBottom center">
+                <span className="post1Image"></span>
+                <section className="Post1ImageBottom">
+                  <div className="Post1Bottom">
                     <span>
                       <span>July 8</span>
                       <span>5 min read</span>
@@ -23,12 +23,12 @@ class Part1 extends Component {
                       <span>- By Jatin Sharma</span>
                     </span>
                   </div>
-                  <div class="Post1Title">
+                  <div className="Post1Title">
                     <span>
                       Salman Khan and Katrina Kaif begin dubbing for Tiger 3
                     </span>
                   </div>
-                  <div class="Post1Desc">
+                  <div className="Post1Desc">
                     <span>
                       The film is expected to release during Diwali this year.
                       Tiger 3 will also see Shah Rukh Khan in a cameo as
@@ -40,10 +40,10 @@ class Part1 extends Component {
               </div>
             </section>
           </div>
-          <div class="right">
-            <section class="post2">
-              <p class="post2Image"></p>
-              <div class="Post2Bottom">
+          <div className="right">
+            <section className="post2">
+              <p className="post2Image"></p>
+              <div className="Post2Bottom">
                 <span>
                   <span>March 21</span>
                   <span>15 min read</span>
@@ -52,13 +52,13 @@ class Part1 extends Component {
                   <span>- By Shivam Chodary</span>
                 </span>
               </div>
-              <div class="title Post2Title">
+              <div className="title Post2Title">
                 <span>
                   What Happens When One Partner Is Vaccinated and the Other
                   Isn't?
                 </span>
               </div>
-              <div class="Post2Desc">
+              <div className="Post2Desc">
                 <span>
                   For the moment, many people are learning to balance happiness
                   about their partner's vaccine eligibility with personal
@@ -66,9 +66,9 @@ class Part1 extends Component {
                 </span>
               </div>
             </section>
-            <section class="post3">
-              <p class="post3Image"></p>
-              <div class="Post3Bottom">
+            <section className="post3">
+              <p className="post3Image"></p>
+              <div className="Post3Bottom">
                 <span>
                   <span>April 1</span>
                   <span>9 min read</span>
@@ -77,13 +77,13 @@ class Part1 extends Component {
                   <span>- By Suresh Mishra</span>
                 </span>
               </div>
-              <div class="title Post3Title">
+              <div className="title Post3Title">
                 <span>
                   These Intimate Portraits Celebrate the Beauty and Versatility
                   of Black Men's Hair
                 </span>
               </div>
-              <div class="Post3Desc">
+              <div className="Post3Desc">
                 <span>
                   For the moment, many people are learning to balance happiness
                   about their partner's vaccine eligibility with personal

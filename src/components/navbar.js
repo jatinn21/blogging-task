@@ -1,31 +1,71 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(Swal);
 
 const Navbar = () => {
+  const jsonDataString = localStorage.LoggedIn;
   const checkWelcome = () => {
-    if (JSON.parse(localStorage.LoggedIn).length == 1) {
-      let activeUserName = JSON.parse(localStorage.LoggedIn)[0].activeUserName;
-      return activeUserName;
-    } else {
-      return "pro";
+    console.log("hello");
+    console.log(localStorage);
+    console.log(localStorage.LoggedIn);
+    console.log(typeof localStorage.LoggedIn);
+    if (jsonDataString) {
+      const parsedData = JSON.parse(jsonDataString);
+      console.log(parsedData);
+      const userName = parsedData[0].activeUserName;
+      const FormatedName = userName[0].toUpperCase() + userName.slice(1);
+      return "Hey, " + FormatedName;
     }
   };
-
-  const checkLogOut = () => {
-    if (JSON.parse(localStorage.LoggedIn).length == 1) {
-      return "Logout";
+  const checkEntryExit = () => {
+    let MsgBtn;
+    if (jsonDataString) {
+      MsgBtn = (
+        <>
+          <span
+            className="exitBTn"
+            onClick={() => {
+              Swal.fire({
+                title: "Are you sure?",
+                text: "You want to Logout?",
+                showCancelButton: true,
+                confirmButtonColor: "rgb(255 63 63)",
+                cancelButtonColor: "rgb(27 125 199)",
+                confirmButtonText: "Yes, Logout!",
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  localStorage.removeItem("LoggedIn");
+                  setTimeout(() => {
+                    window.location.replace(
+                      "https://blogging-task-by-jatin.netlify.app"
+                    );
+                  }, 500);
+                }
+              });
+            }}
+          >
+            LogOut
+          </span>
+        </>
+      );
     } else {
-      return "Login / SignUp";
+      MsgBtn = (
+        <Link to={"/login"} className="entryBtn">
+          <span>Login / Signup</span>
+        </Link>
+      );
     }
+    return MsgBtn;
   };
 
   return (
     <nav>
-      <div class="logo">
+      <div className="logo">
         <span>BlogExpress</span>
       </div>
-      <div class="links" id="home">
+      <div className="links">
         <span>
           <a href="#home">Home</a>
         </span>
@@ -45,13 +85,14 @@ const Navbar = () => {
           <a href="#contact">Contact</a>
         </span>
       </div>
-      <div class="loginSignup">
+      <div className="loginSignup">
         <div className="welcome">
-          <span className="welcomeAcc">{checkWelcome()}</span>
+          <div className="welcomeAcc">{checkWelcome()}</div>
         </div>
-        <div>{checkLogOut()}</div>
+        <div className="entryExit">
+          <div className="exitEntryBtn">{checkEntryExit()}</div>
+        </div>
       </div>
-      <div className="trial"></div>
     </nav>
   );
 };
