@@ -41,10 +41,13 @@ nav {
   align-items: center;
   padding: 2rem;
   position: fixed;
+  /* position: absolute !important; */
+  top: 0 !important;
   height: 10rem;
   background-color: rgb(255, 255, 255);
   width: 100%;
   border-bottom: 1px solid rgb(70, 70, 70) !important;
+  justify-content: space-around;
 }
 
 .center {
@@ -65,12 +68,18 @@ nav {
   font-weight: 500;
   text-shadow: 0px 0px 1px rgb(60, 57, 57), 0px 0px 1px grey, 0px 0px 1px grey;
   margin: 0 6rem 0 10rem;
+  align-items: center;
 }
 
 .links span {
   cursor: pointer;
   border-bottom: 1.5px solid transparent;
   padding: 1rem;
+}
+
+.separator:hover {
+  border: none !important;
+  opacity: 1;
 }
 
 .loginSignup {
@@ -88,6 +97,10 @@ nav {
   text-shadow: 0px 0px 1px rgb(122, 122, 122), 0px 0px 1px rgb(31, 31, 31),
     0px 0px 1px rgb(11, 11, 11);
   color: rgb(0, 64, 159);
+  border-bottom: 1.5px solid transparent;
+}
+
+.separator:hover {
   border-bottom: 1.5px solid transparent;
 }
 
@@ -651,8 +664,9 @@ img {
   color: rgb(191, 193, 194);
 }
 
-footer {
-  height: 50rem;
+#contact {
+  width: 100vw;
+  height: max-content;
   padding: 5rem 6rem;
   display: flex;
   column-gap: 4rem;
@@ -748,6 +762,7 @@ footer div {
   background-image: url("https://apiexcellent.com/images/landingpage/hindustan-times-logo-20220307192322.jpg");
 }
 
+/* /////////////////////////////////////////////////////////////////////////////////////// 
 /* sweetAlert CSS */
 .swal2-popup {
   font-size: 2rem;
@@ -757,4 +772,149 @@ footer div {
 div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
   outline: none !important;
   border: none;
+}
+
+/* responsive  */
+
+@media (width <=1024px) {
+  .logo {
+    font-size: 3.5vw;
+  }
+  .links {
+    font-size: 2.5vw;
+    margin: 0 2rem 0 2rem;
+  }
+  .loginSignup span {
+    width: max-content;
+    font-size: 2.5vw;
+  }
+
+  .part1 {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .left,
+  .right,
+  .post2 {
+    width: 100%;
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 1px solid grey;
+  }
+  .right {
+    height: 100%;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+  }
+  .carousel,
+  .booksCarousel {
+    height: 33rem;
+    margin: 5rem 0 0rem;
+  }
+  .carouselPost,
+  .book {
+    min-width: 45%;
+  }
+  .carouselImage {
+    max-height: 19rem;
+  }
+  .carouselAbout {
+    font-size: 1.3rem;
+  }
+  .carouselTitle {
+    padding: 1rem 0;
+    font-size: 1.8rem;
+  }
+
+  .Article_Image {
+    max-height: 20rem;
+  }
+  .Article_Details,
+  .Podcast_Details {
+    row-gap: 1rem;
+  }
+  .article_Author,
+  .article_Title,
+  .article_Desc,
+  .podcast_Speaker,
+  .podcast_Title,
+  .podcast_Desc {
+    font-size: 1.5rem;
+  }
+  .article_Desc,
+  .podcast_Desc {
+    font-size: 1.5rem;
+    word-spacing: 0.5rem;
+    line-height: 2rem;
+  }
+  .book {
+    min-width: 32%;
+  }
+  .bookImage {
+    max-height: 20rem;
+  }
+  .bookTitle,
+  .bookBy {
+    font-size: 1.5rem;
+  }
+  .buyButton {
+    padding: 1rem 2rem;
+    font-size: 1.52rem;
+  }
+  .Podcast_Image {
+    max-height: 20rem;
+  }
+  .part6 {
+    margin-top: 10rem;
+    height: max-content;
+    padding: 7rem 0;
+  }
+  .subscribeTitle {
+    height: 15%;
+    margin-top: 2%;
+    font-size: 2rem;
+  }
+  .subscribeDesc {
+    height: 15%;
+    margin-bottom: 2rem;
+  }
+  .subscribeDesc span {
+    font-size: 2rem;
+  }
+
+  #email,
+  .Subscribe {
+    font-size: 2rem;
+  }
+  footer {
+    /* height: 50rem; */
+    padding: 5rem 3rem;
+    column-gap: 2rem;
+  }
+  footer .logo {
+    font-size: 3rem;
+  }
+
+  .leftSide,
+  .MiddleSide {
+    row-gap: 4rem;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+  }
+  .leftSideDesc {
+    margin-bottom: 18rem;
+  }
+  .me,
+  .creator {
+    font-size: 1.7rem;
+    width: max-content;
+  }
+  .MiddleSide h1 {
+    font-size: 2rem;
+    width: max-content;
+  }
+  .rightSide span {
+    max-width: 18rem;
+  }
 }

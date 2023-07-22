@@ -6,17 +6,47 @@ const MySwal = withReactContent(Swal);
 
 const Navbar = () => {
   const jsonDataString = localStorage.LoggedIn;
+  const linksSection = () => {
+    if (jsonDataString) {
+      localStorage.setItem("AllBlogs", JSON.stringify([]));
+
+      return (
+        <span>
+          <Link to={"/allBlogs"}>View All Blogs</Link>
+        </span>
+      );
+    } else {
+      return (
+        <>
+          <span>
+            <a href="#home">Home</a>
+          </span>
+          <span>
+            <a href="#blogs">Blog</a>
+          </span>
+          <span>
+            <a href="#podcasts">Podcast</a>
+          </span>
+          <span>
+            <a href="#articles">Articles</a>
+          </span>
+          <span>
+            <a href="#contact">Contact</a>
+          </span>
+        </>
+      );
+    }
+  };
   const checkWelcome = () => {
-    console.log("hello");
-    console.log(localStorage);
-    console.log(localStorage.LoggedIn);
-    console.log(typeof localStorage.LoggedIn);
     if (jsonDataString) {
       const parsedData = JSON.parse(jsonDataString);
-      console.log(parsedData);
       const userName = parsedData[0].activeUserName;
       const FormatedName = userName[0].toUpperCase() + userName.slice(1);
-      return "Hey, " + FormatedName;
+      return (
+        <div className="welcome">
+          <div className="welcomeAcc">Hey, {FormatedName}</div>
+        </div>
+      );
     }
   };
   const checkEntryExit = () => {
@@ -65,30 +95,9 @@ const Navbar = () => {
       <div className="logo">
         <span>BlogExpress</span>
       </div>
-      <div className="links">
-        <span>
-          <a href="#home">Home</a>
-        </span>
-        <span>
-          <a href="#blogs">Blog</a>
-        </span>
-        <span>
-          <a href="#podcasts">Podcast</a>
-        </span>
-        <span>
-          <a href="#articles">Articles</a>
-        </span>
-        <span>
-          <a href="#books">Books</a>
-        </span>
-        <span>
-          <a href="#contact">Contact</a>
-        </span>
-      </div>
+      <div className="links">{linksSection()}</div>
       <div className="loginSignup">
-        <div className="welcome">
-          <div className="welcomeAcc">{checkWelcome()}</div>
-        </div>
+        {checkWelcome()}
         <div className="entryExit">
           <div className="exitEntryBtn">{checkEntryExit()}</div>
         </div>
