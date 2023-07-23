@@ -202,9 +202,10 @@ label {
 
 .BlogContainer:hover {
   backdrop-filter: blur(5rem);
+  opacity: 0.5;
 }
 .readMore {
-  height: 90%;
+  height: 30%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -228,6 +229,7 @@ label {
   border-top: 10px solid white;
   display: flex;
   border-bottom: 10px solid white;
+  opacity: 1 !important;
 }
 
 .blogImageSection {
@@ -307,4 +309,12 @@ label {
   justify-content: space-evenly;
   font-size: 3rem;
   font-weight: 900;
+  align-items: center;
+}
+
+footer span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
